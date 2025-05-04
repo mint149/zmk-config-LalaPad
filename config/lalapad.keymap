@@ -46,14 +46,14 @@
 &glidepoint_listener_L {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_xy_scaler 3 2>,
+        <&zip_xy_scaler 6 2>,
         <&zip_temp_layer MOUSE_L_LAYER 500>;
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_scaler 3 4>,
+            <&zip_xy_scaler 3 5>,
             <&zip_temp_layer MOUSE_L_LAYER 500>;
     };
 
@@ -167,12 +167,20 @@
         mt2: mod_tap2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+		&mt {
+			flavor = "balanced";
+		};
+
+		&lt {
+			flavor = "balanced";
+		};
     };
 
     keymap {
