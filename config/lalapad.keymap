@@ -8,15 +8,12 @@
 #define MAC_DEFAULT     0
 #define WIN_DEFAULT     1
 #define MAC_LOWER       2
-#define WIN_LOWER       3
-#define MAC_RAISE       4
-#define WIN_RAISE       5
-#define MAC_ADJUST      6
-#define WIN_ADJUST      7
-#define MOUSE_R_LAYER   8
-#define SCROLL_R_LAYER  9
-#define MOUSE_L_LAYER   10
-#define SCROLL_L_LAYER  11
+#define MAC_RAISE       3
+#define MAC_ADJUST      4
+#define MOUSE_R_LAYER   5
+#define SCROLL_R_LAYER  6
+#define MOUSE_L_LAYER   7
+#define SCROLL_L_LAYER  8
 
 // Mouse Scroll Value
 
@@ -214,19 +211,6 @@
     };
 
     macros {
-        connectWin: tglWin {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&tog_off 1>,
-                <&macro_wait_time 200>,
-                <&bt BT_SEL 1>,
-                <&macro_wait_time 500>,
-                <&tog_on 1>;
-
-            label = "TGLWIN";
-        };
-
         connectMac: connectMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -239,16 +223,17 @@
             label = "CONNECTMAC";
         };
 
-        connectiPad: connectiPad {
+        connectWin: tglWin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&tog_off 1>,
                 <&macro_wait_time 200>,
-                <&bt BT_SEL 3>,
-                <&macro_wait_time 500>;
+                <&bt BT_SEL 1>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
 
-            label = "CONNECTIPAD";
+            label = "TGLWIN";
         };
 
         connectAndroid: connectAndroid {
@@ -263,6 +248,18 @@
 
             label = "CONNECTANDROID";
         };
+
+        connectiPad: connectiPad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 3>,
+                <&macro_wait_time 500>;
+
+            label = "CONNECTIPAD";
+        };
     };
 
     keymap {
@@ -276,7 +273,7 @@
 &kp TAB    &kp Q      &kp W             &kp E              &kp R          &kp T            &kp Y          &kp U        &kp I            &kp O            &kp P      &kp BACKSPACE
 &kp LCMD   &kp A      &kp S             &kp D              &kp F          &kp G            &kp H          &kp J        &kp K            &kp L            &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X             &kp C              &kp V          &kp B            &kp N          &kp M        &kp COMMA        &kp PERIOD       &kp SLASH  &kp SQT
-&mkp LCLK  &mkp RCLK  &kp LEFT_ALT      &lt 2 LANG2        &kp SPACE      &lt 4 LANG2      &lt 6 LANG1    &kp RCTRL    &lt 4 LANG1      &kp PRINTSCREEN  &mkp LCLK  &mkp RCLK
+&mkp LCLK  &mkp RCLK  &kp LEFT_ALT      &lt 2 LANG2        &kp SPACE      &lt 3 LANG2      &lt 4 LANG1    &kp RCTRL    &lt 3 LANG1      &kp PRINTSCREEN  &mkp LCLK  &mkp RCLK
                       &kp C_AC_FORWARD  &kp C_VOLUME_DOWN  &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown  &allow_end
             >;
         };
@@ -289,26 +286,13 @@
 &kp TAB    &kp Q      &kp W             &kp E               &kp R          &kp T            &kp Y          &kp U        &kp I             &kp O            &kp P      &kp BACKSPACE
 &kp LCTRL  &kp A      &kp S             &kp D               &kp F          &kp G            &kp H          &kp J        &kp K             &kp L            &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X             &kp C               &kp V          &kp B            &kp N          &kp M        &kp COMMA         &kp PERIOD       &kp SLASH  &kp SQT
-&mkp LCLK  &mkp RCLK  &kp LEFT_ALT      &lt 3 INT_MUHENKAN  &kp SPACE      &lt 5 LANG2      &lt 7 LANG1    &kp RCMD     &lt 5 INT_HENKAN  &kp PRINTSCREEN  &mkp LCLK  &mkp RCLK
+&mkp LCLK  &mkp RCLK  &kp LEFT_ALT      &lt 2 INT_MUHENKAN  &kp SPACE      &lt 3 LANG2      &lt 4 LANG1    &kp RCMD     &lt 3 INT_HENKAN  &kp PRINTSCREEN  &mkp LCLK  &mkp RCLK
                       &kp C_AC_FORWARD  &kp C_VOLUME_DOWN   &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown   &allow_end
             >;
         };
 
         MAC_LOWER {
             display-name = "mac_lower";
-            sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
-
-            bindings = <
-&kp ESC  &trans   &kp F2   &kp F3  &kp F4  &kp F5   &kp N1     &kp N2     &kp N3    &kp N4    &kp N5    &kp DELETE
-&trans   &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp N6     &kp N7     &kp N8    &kp N9    &kp N0    &trans
-&trans   &kp F11  &kp F12  &trans  &trans  &trans   &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&trans   &trans   &trans   &trans  &trans  &trans   &trans     &trans     &trans    &trans    &trans    &trans
-                  &trans   &trans  &trans  &trans   &trans     &trans     &trans    &trans
-            >;
-        };
-
-        WIN_LOWER {
-            display-name = "win_lower";
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
@@ -333,32 +317,8 @@
             >;
         };
 
-        WIN_RAISE {
-            display-name = "win_raise";
-            sensor-bindings = <&volume_up_down>, <&volume_up_down>;
-
-            bindings = <
-&kp ESC  &trans  &trans  &kp LBKT              &kp RBKT               &trans  &kp HOME   &kp RC(PG_UP)  &kp RC(PG_DN)  &kp END    &trans    &kp DEL
-&trans   &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT  &trans    &trans
-&trans   &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &kp MINUS  &kp EQUAL      &kp LBKT       &kp RBKT   &kp BSLH  &kp GRAVE
-&trans   &trans  &trans  &trans                &trans                 &trans  &trans     &trans         &trans         &trans     &trans    &trans
-                 &trans  &trans                &trans                 &trans  &trans     &trans         &trans         &trans
-            >;
-        };
-
         MAC_ADJUST {
             display-name = "mac_adjust";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &connectMac  &connectWin     &connectAndroid  &connectiPad    &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader  &studio_unlock  &bt BT_CLR       &bt BT_CLR_ALL  &trans
-&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans           &trans          &trans
-&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans           &trans          &trans
-                &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans
-            >;
-        };
-
-        WIN_ADJUST {
-            display-name = "win_adjust";
             bindings = <
 &trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &connectMac  &connectWin     &connectAndroid  &connectiPad    &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader  &studio_unlock  &bt BT_CLR       &bt BT_CLR_ALL  &trans
@@ -420,14 +380,9 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        Mac_Adjust {
-            if-layers = <2 4>;
-            then-layer = <6>;
-        };
-
-        Win_Adjust {
-            if-layers = <3 5>;
-            then-layer = <7>;
+        Adjust {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
