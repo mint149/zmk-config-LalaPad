@@ -211,14 +211,65 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
-		
+    };
+
+    macros {
+        connectWin: tglWin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 1>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
+
+            label = "TGLWIN";
+        };
+
+        connectMac: connectMac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>;
+
+            label = "CONNECTMAC";
+        };
+
+        connectiPad: connectiPad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 3>,
+                <&macro_wait_time 500>;
+
+            label = "CONNECTIPAD";
+        };
+
+        connectAndroid: connectAndroid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 2>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
+
+            label = "CONNECTANDROID";
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         MAC_DEFAULT {
-            display-name = "Default";
+            display-name = "mac_default";
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
@@ -231,7 +282,7 @@
         };
 
         WIN_DEFAULT {
-            display-name = "win_Default";
+            display-name = "win_default";
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
@@ -244,7 +295,7 @@
         };
 
         MAC_LOWER {
-            display-name = "secondary_layer";
+            display-name = "mac_lower";
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
@@ -257,7 +308,7 @@
         };
 
         WIN_LOWER {
-            display-name = "win_secondary_layer";
+            display-name = "win_lower";
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
@@ -270,8 +321,9 @@
         };
 
         MAC_RAISE {
-            display-name = "tertiary_layer";
+            display-name = "mac_raise";
             sensor-bindings = <&volume_up_down>, <&volume_up_down>;
+
             bindings = <
 &kp ESC  &trans  &trans  &kp LBKT              &kp RBKT               &trans  &kp HOME   &kp RC(PG_UP)  &kp RC(PG_DN)  &kp END    &trans    &kp DEL
 &trans   &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT  &trans    &trans
@@ -282,8 +334,9 @@
         };
 
         WIN_RAISE {
-            display-name = "win_tertiary_layer";
+            display-name = "win_raise";
             sensor-bindings = <&volume_up_down>, <&volume_up_down>;
+
             bindings = <
 &kp ESC  &trans  &trans  &kp LBKT              &kp RBKT               &trans  &kp HOME   &kp RC(PG_UP)  &kp RC(PG_DN)  &kp END    &trans    &kp DEL
 &trans   &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT  &trans    &trans
@@ -294,24 +347,24 @@
         };
 
         MAC_ADJUST {
-            display-name = "system_layer";
+            display-name = "mac_adjust";
             bindings = <
-&trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader   &studio_unlock  &bt BT_CLR    &bt BT_CLR_ALL  &trans
-&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans        &trans          &trans
-&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans        &trans          &trans
-                &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &connectMac  &connectWin     &connectAndroid  &connectiPad    &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader  &studio_unlock  &bt BT_CLR       &bt BT_CLR_ALL  &trans
+&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans           &trans          &trans
+&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans           &trans          &trans
+                &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans
             >;
         };
 
         WIN_ADJUST {
-            display-name = "win_system_layer";
+            display-name = "win_adjust";
             bindings = <
-&trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader   &studio_unlock  &bt BT_CLR    &bt BT_CLR_ALL  &trans
-&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans        &trans          &trans
-&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans        &trans          &trans
-                &trans  &trans  &trans       &trans      &trans        &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &connectMac  &connectWin     &connectAndroid  &connectiPad    &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader  &studio_unlock  &bt BT_CLR       &bt BT_CLR_ALL  &trans
+&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans           &trans          &trans
+&trans  &trans  &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans           &trans          &trans
+                &trans  &trans  &trans       &trans      &trans        &trans       &trans          &trans
             >;
         };
 
@@ -324,6 +377,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans     &trans     &trans       &trans  &trans
                 &trans  &trans  &trans  &trans  &trans           &trans     &trans     &trans
             >;
+
+            sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
         };
 
         SCROLL_R_LAYER {
@@ -346,6 +401,8 @@
 &trans  &trans           &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
                          &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
         };
 
         SCROLL_L_LAYER {
@@ -357,6 +414,20 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Mac_Adjust {
+            if-layers = <2 4>;
+            then-layer = <6>;
+        };
+
+        Win_Adjust {
+            if-layers = <3 5>;
+            then-layer = <7>;
         };
     };
 };
