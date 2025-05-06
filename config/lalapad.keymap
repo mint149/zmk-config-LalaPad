@@ -226,6 +226,7 @@
 
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
+            sensor-bindings = <&volume_up_down>, <&volume_up_down>;
             bindings = <
 &kp ESC  &trans  &trans  &kp LBKT              &kp RBKT               &trans  &kp HOME   &kp RC(PG_UP)  &kp RC(PG_DN)  &kp END    &trans    &kp DEL
 &trans   &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT  &trans    &trans
@@ -237,8 +238,6 @@
 
         SYSTEM_LAYER {
             display-name = "system_layer";
-            sensor-bindings = <&scroll_down_up>, <&volume_up_down>;
-
             bindings = <
 &trans  &trans  &trans  &trans  &trans       &trans      &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &bootloader  &sys_reset  &sys_reset    &bootloader   &studio_unlock  &bt BT_CLR    &bt BT_CLR_ALL  &trans
