@@ -191,8 +191,18 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
+			hold-while-undecided;
 
             display-name = "Layer-Tap";
+        };
+
+		lt_ex: lt_ex {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&IMETGL>;
+            display-name = "Layer-Tap-EX";
         };
 
         tog_on: toggle_layer_on_only {
@@ -211,6 +221,17 @@
     };
 
     macros {
+        IMETGL: IMETGL {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+				<&tog_off MOUSE_R_LAYER>,
+				<&tog_off MOUSE_L_LAYER>,
+				<&macro_param_1to1>
+				<&kp MACRO_PLACEHOLDER>;
+            label = "IMETGL";
+        };
+
         connectMac: connectMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
