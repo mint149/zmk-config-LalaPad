@@ -227,7 +227,7 @@
             bindings =
 				<&tog_off MOUSE_R_LAYER>,
 				<&tog_off MOUSE_L_LAYER>,
-				<&macro_param_1to1>
+				<&macro_param_1to1>,
 				<&kp MACRO_PLACEHOLDER>;
             label = "IMETGL";
         };
