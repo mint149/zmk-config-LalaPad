@@ -201,6 +201,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+			hold-while-undecided;
             bindings = <&mo>, <&IMETGL>;
             display-name = "Layer-Tap-EX";
         };
@@ -294,7 +295,7 @@
 &kp TAB    &kp Q   &kp W             &kp E              &kp R          &kp T            &kp Y          &kp U        &kp I            &kp O            &kp P      &kp BACKSPACE
 &kp LCMD   &kp A   &kp S             &kp D              &kp F          &kp G            &kp H          &kp J        &kp K            &kp L            &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z   &kp X             &kp C              &kp V          &kp B            &kp N          &kp M        &kp COMMA        &kp PERIOD       &kp SLASH  &kp SQT
-&trans     &trans  &kp LEFT_ALT      &lt 2 LANG2        &kp SPACE      &lt 3 LANG2      &lt 4 LANG1    &kp RCTRL    &lt 3 LANG1      &kp PRINTSCREEN  &trans     &trans
+&trans     &trans  &kp LEFT_ALT      &lt_ex 2 LANG2        &kp SPACE      &lt_ex 3 LANG2      &lt_ex 4 LANG1    &kp RCTRL    &lt_ex 3 LANG1      &kp PRINTSCREEN  &trans     &trans
                    &kp C_AC_FORWARD  &kp C_VOLUME_DOWN  &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown  &allow_end
             >;
         };
@@ -307,7 +308,7 @@
 &kp TAB    &kp Q      &kp W             &kp E               &kp R          &kp T            &kp Y          &kp U        &kp I             &kp O            &kp P      &kp BACKSPACE
 &kp LCTRL  &kp A      &kp S             &kp D               &kp F          &kp G            &kp H          &kp J        &kp K             &kp L            &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X             &kp C               &kp V          &kp B            &kp N          &kp M        &kp COMMA         &kp PERIOD       &kp SLASH  &kp SQT
-&mkp LCLK  &mkp RCLK  &kp LEFT_ALT      &lt 2 INT_MUHENKAN  &kp SPACE      &lt 3 LANG2      &lt 4 LANG1    &kp RCMD     &lt 3 INT_HENKAN  &kp PRINTSCREEN  &mkp LCLK  &mkp RCLK
+&mkp LCLK  &mkp RCLK  &kp LEFT_ALT      &lt_ex 2 INT_MUHENKAN  &kp SPACE      &lt_ex 3 LANG2      &lt_ex 4 LANG1    &kp RCMD     &lt_ex 3 INT_HENKAN  &kp PRINTSCREEN  &mkp LCLK  &mkp RCLK
                       &kp C_AC_FORWARD  &kp C_VOLUME_DOWN   &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown   &allow_end
             >;
         };
