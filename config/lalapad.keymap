@@ -191,30 +191,30 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
-			hold-while-undecided;
 
+            hold-while-undecided;
             display-name = "Layer-Tap";
         };
 
-		lt_to_layer_0: lt_to_layer_0 {
+        lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to_layer_0>;
-			hold-while-undecided;
 
+            hold-while-undecided;
             label = "LAYER_TAP_TO_0";
         };
 
-		lt_to_layer_1: lt_to_layer_1 {
+        lt_to_layer_1: lt_to_layer_1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to_layer_1>;
-			hold-while-undecided;
 
+            hold-while-undecided;
             label = "LAYER_TAP_TO_1";
         };
 
@@ -231,7 +231,6 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
-
     };
 
     macros {
@@ -308,11 +307,11 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&kp TAB    &kp Q   &kp W             &kp E              &kp R          &kp T            &kp Y          &kp U        &kp I            &kp O            &kp P      &kp BACKSPACE
-&kp LCMD   &kp A   &kp S             &kp D              &kp F          &kp G            &kp H          &kp J        &kp K            &kp L            &kp SEMI   &kp ENTER
-&kp LSHFT  &kp Z   &kp X             &kp C              &kp V          &kp B            &kp N          &kp M        &kp COMMA        &kp PERIOD       &kp SLASH  &kp SQT
-&trans     &trans  &kp LEFT_ALT      &lt_to_layer_0 6 LANG2        &kp SPACE      &kp LEFT_ALT      &kp LEFT_ALT    &kp RCTRL    &lt_to_layer_0 7 LANG1      &kp PRINTSCREEN  &trans     &trans
-                   &kp C_AC_FORWARD  &kp C_VOLUME_DOWN  &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown  &allow_end
+&kp TAB    &kp Q   &kp W         &kp E                   &kp R      &kp T         &kp Y          &kp U        &kp I                   &kp O            &kp P      &kp BACKSPACE
+&kp LCMD   &kp A   &kp S         &kp D                   &kp F      &kp G         &kp H          &kp J        &kp K                   &kp L            &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z   &kp X         &kp C                   &kp V      &kp B         &kp N          &kp M        &kp COMMA               &kp PERIOD       &kp SLASH  &kp SQT
+&trans     &trans  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2  &kp SPACE  &kp LEFT_ALT  &kp LEFT_ALT   &kp RCTRL    &lt_to_layer_0 7 LANG1  &kp PRINTSCREEN  &trans     &trans
+                   &kp B         &kp D                   &kp C      &kp A         &allow_pageup  &allow_home  &allow_pagedown         &allow_end
             >;
         };
 
@@ -321,11 +320,11 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&kp TAB    &kp Q      &kp W             &kp E               &kp R          &kp T            &kp Y          &kp U        &kp I             &kp O            &kp P      &kp BACKSPACE
-&kp LCTRL  &kp A      &kp S             &kp D               &kp F          &kp G            &kp H          &kp J        &kp K             &kp L            &kp SEMI   &kp ENTER
-&kp LSHFT  &kp Z      &kp X             &kp C               &kp V          &kp B            &kp N          &kp M        &kp COMMA         &kp PERIOD       &kp SLASH  &kp SQT
-&trans     &trans  &kp LEFT_ALT      &lt_to_layer_1 6 INT_MUHENKAN  &kp SPACE      &kp LEFT_ALT      &kp LEFT_ALT    &kp RCMD     &lt_to_layer_1 7 INT_HENKAN  &kp PRINTSCREEN  &trans     &trans
-                      &kp C_AC_FORWARD  &kp C_VOLUME_DOWN   &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown   &allow_end
+&kp TAB    &kp Q   &kp W             &kp E                          &kp R          &kp T            &kp Y          &kp U        &kp I                        &kp O            &kp P      &kp BACKSPACE
+&kp LCTRL  &kp A   &kp S             &kp D                          &kp F          &kp G            &kp H          &kp J        &kp K                        &kp L            &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z   &kp X             &kp C                          &kp V          &kp B            &kp N          &kp M        &kp COMMA                    &kp PERIOD       &kp SLASH  &kp SQT
+&trans     &trans  &kp LEFT_ALT      &lt_to_layer_1 6 INT_MUHENKAN  &kp SPACE      &kp LEFT_ALT     &kp LEFT_ALT   &kp RCMD     &lt_to_layer_1 7 INT_HENKAN  &kp PRINTSCREEN  &trans     &trans
+                   &kp C_AC_FORWARD  &kp C_VOLUME_DOWN              &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown              &allow_end
             >;
         };
 
