@@ -234,13 +234,6 @@
     };
 
     macros {
-        trans2: trans2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &trans>;
-            label = "Trans and TO_LAYER_0";
-        };
-
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -339,7 +332,7 @@
             display-name = "mouse_r_layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans     &trans     &trans       &trans  &trans
-&trans  &trans2  &trans  &trans  &trans  &trans  &kp RC(RS(TAB))  &mkp LCLK  &mkp RCLK  &kp RC(TAB)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp RC(RS(TAB))  &mkp LCLK  &mkp RCLK  &kp RC(TAB)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans           &mkp MCLK  &trans     &trans       &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans     &trans     &trans       &trans  &trans
                 &trans  &trans  &trans  &trans  &trans           &trans     &trans     &trans
@@ -362,7 +355,7 @@
         MOUSE_L_LAYER {
             display-name = "mouse_l_layer";
             bindings = <
-&trans  &trans2           &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(LC(TAB))  &mkp LCLK  &mkp RCLK  &kp LC(TAB)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans           &trans     &mkp MCLK  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans           &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
