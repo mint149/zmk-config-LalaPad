@@ -235,7 +235,7 @@
 		jis_2: jis_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_2>, <&kp LEFT_BRACKET>;
+            bindings = <&kp N2>, <&kp LEFT_BRACKET>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "JIS_2";
