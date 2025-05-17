@@ -232,14 +232,95 @@
             toggle-mode = "off";
         };
 
-		jis_2: jis_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+		jis_1: jis_1 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N1>, <&kp EXCLAMATION>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_2";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_1";
+		};
+
+		jis_2: jis_2 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_2";
+		};
+
+		jis_3: jis_3 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N3>, <&kp HASH>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_3";
+		};
+
+		jis_4: jis_4 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N4>, <&kp DOLLAR>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_4";
+		};
+
+		jis_5: jis_5 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N5>, <&kp PERCENT>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_5";
+		};
+
+		jis_6: jis_6 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N6>, <&kp EQUAL>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_6";
+		};
+
+		jis_7: jis_7 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N7>, <&kp CARET>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_7";
+		};
+
+		jis_8: jis_8 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N8>, <&kp DOUBLE_QUOTES>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_8";
+		};
+
+		jis_9: jis_9 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N9>, <&kp ASTERISK>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_9";
+		};
+
+		jis_0: jis_0 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>;
+
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_0";
+		};
 
 
     };
@@ -321,7 +402,7 @@
 &kp TAB    &kp Q   &kp W         &kp E                   &kp R      &kp T         &kp Y          &kp U        &kp I                   &kp O            &kp P      &kp BACKSPACE
 &kp LCMD   &kp A   &kp S         &kp D                   &kp F      &kp G         &kp H          &kp J        &kp K                   &kp L            &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z   &kp X         &kp C                   &kp V      &kp B         &kp N          &kp M        &kp COMMA               &kp PERIOD       &kp SLASH  &kp SQT
-&trans     &trans  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2  &kp SPACE  &kp N2  &jis_2   &kp RCTRL    &lt_to_layer_0 7 LANG1  &kp PRINTSCREEN  &trans     &trans
+&trans     &trans  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2  &kp SPACE  &kp LEFT_ALT  &kp LEFT_ALT   &kp RCTRL    &lt_to_layer_0 7 LANG1  &kp PRINTSCREEN  &trans     &trans
                    &kp LCMD      &kp D                   &kp C      &kp A         &allow_pageup  &allow_home  &allow_pagedown         &allow_end
             >;
         };
