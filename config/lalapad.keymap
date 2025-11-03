@@ -247,97 +247,95 @@
             toggle-mode = "off";
         };
 
-		jis_1: jis_1 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N1>, <&kp EXCLAMATION>;
+        jis_1: jis_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp EXCLAMATION>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_1";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_1";
+        };
 
-		jis_2: jis_2 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+        jis_2: jis_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LEFT_BRACKET>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_2";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_2";
+        };
 
-		jis_3: jis_3 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N3>, <&kp HASH>;
+        jis_3: jis_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp HASH>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_3";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_3";
+        };
 
-		jis_4: jis_4 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N4>, <&kp DOLLAR>;
+        jis_4: jis_4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp DOLLAR>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_4";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_4";
+        };
 
-		jis_5: jis_5 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N5>, <&kp PERCENT>;
+        jis_5: jis_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp PERCENT>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_5";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_5";
+        };
 
-		jis_6: jis_6 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N6>, <&kp EQUAL>;
+        jis_6: jis_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp EQUAL>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_6";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_6";
+        };
 
-		jis_7: jis_7 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N7>, <&kp CARET>;
+        jis_7: jis_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp CARET>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_7";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_7";
+        };
 
-		jis_8: jis_8 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N8>, <&kp DOUBLE_QUOTES>;
+        jis_8: jis_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp DOUBLE_QUOTES>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_8";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_8";
+        };
 
-		jis_9: jis_9 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N9>, <&kp ASTERISK>;
+        jis_9: jis_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp ASTERISK>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_9";
-		};
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_9";
+        };
 
-		jis_0: jis_0 {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>;
+        jis_0: jis_0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>;
 
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-			label = "JIS_0";
-		};
-
-
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "JIS_0";
+        };
     };
 
     macros {
@@ -403,6 +401,35 @@
                 <&macro_wait_time 500>;
 
             label = "CONNECTIPAD";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        QW_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <1 2>;
+        };
+
+        DF_LANG2 {
+            bindings = <&kp LANG2>;
+            key-positions = <15 16>;
+        };
+
+        JK_LANG1 {
+            bindings = <&kp LANG1>;
+            key-positions = <19 20>;
+        };
+
+        Paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <7 8>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <7 9>;
         };
     };
 
@@ -512,11 +539,11 @@
         MAC_ADJUST {
             display-name = "mac_adjust";
             bindings = <
-&trans  &trans  &tog 1  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR    &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
-                &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans
+&trans  &trans  &tog 1  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans         &trans         &trans
+                &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans
             >;
         };
     };
