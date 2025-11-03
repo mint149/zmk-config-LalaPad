@@ -409,26 +409,31 @@
 
         QW_TAB {
             bindings = <&kp TAB>;
+			timeout-ms = 20;
             key-positions = <1 2>;
         };
 
         DF_LANG2 {
             bindings = <&kp LANG2>;
+			timeout-ms = 20;
             key-positions = <15 16>;
         };
 
         JK_LANG1 {
             bindings = <&kp LANG1>;
+			timeout-ms = 20;
             key-positions = <19 20>;
         };
 
         Paste {
             bindings = <&kp LG(V)>;
+			timeout-ms = 20;
             key-positions = <7 8>;
         };
 
         copy {
             bindings = <&kp LG(C)>;
+			timeout-ms = 20;
             key-positions = <7 9>;
         };
     };
