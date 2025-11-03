@@ -247,95 +247,97 @@
             toggle-mode = "off";
         };
 
-        jis_1: jis_1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp EXCLAMATION>;
+		jis_1: jis_1 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N1>, <&kp EXCLAMATION>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_1";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_1";
+		};
 
-        jis_2: jis_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+		jis_2: jis_2 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N2>, <&kp LEFT_BRACKET>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_2";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_2";
+		};
 
-        jis_3: jis_3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N3>, <&kp HASH>;
+		jis_3: jis_3 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N3>, <&kp HASH>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_3";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_3";
+		};
 
-        jis_4: jis_4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp DOLLAR>;
+		jis_4: jis_4 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N4>, <&kp DOLLAR>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_4";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_4";
+		};
 
-        jis_5: jis_5 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N5>, <&kp PERCENT>;
+		jis_5: jis_5 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N5>, <&kp PERCENT>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_5";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_5";
+		};
 
-        jis_6: jis_6 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp EQUAL>;
+		jis_6: jis_6 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N6>, <&kp EQUAL>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_6";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_6";
+		};
 
-        jis_7: jis_7 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp CARET>;
+		jis_7: jis_7 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N7>, <&kp CARET>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_7";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_7";
+		};
 
-        jis_8: jis_8 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp DOUBLE_QUOTES>;
+		jis_8: jis_8 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N8>, <&kp DOUBLE_QUOTES>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_8";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_8";
+		};
 
-        jis_9: jis_9 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp ASTERISK>;
+		jis_9: jis_9 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N9>, <&kp ASTERISK>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_9";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_9";
+		};
 
-        jis_0: jis_0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>;
+		jis_0: jis_0 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "JIS_0";
-        };
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+			label = "JIS_0";
+		};
+
+
     };
 
     macros {
@@ -439,21 +441,25 @@
 
         RT {
             bindings = <&kp LG(Y)>;
+            timeout-ms = <20>;
             key-positions = <4 5>;
         };
 
         FG {
             bindings = <&kp LG(A)>;
+            timeout-ms = <20>;
             key-positions = <16 17>;
         };
 
         VB {
             bindings = <&kp LG(Z)>;
+            timeout-ms = <20>;
             key-positions = <28 29>;
         };
 
         NM {
             bindings = <&kp RG(V)>;
+            timeout-ms = <20>;
             key-positions = <30 31>;
         };
     };
@@ -466,11 +472,11 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_up_down>;
 
             bindings = <
-&kp TAB    &kp Q      &kp W     &kp E                       &kp R      &kp T            &kp Y          &kp U        &kp I                   &kp O       &kp P             &kp BACKSPACE
-&kp LCMD   &kp A      &kp S     &kp D                       &kp F      &kp G            &kp H          &kp J        &kp K                   &kp L       &kp SEMI          &kp ENTER
-&kp LSHFT  &kp Z      &kp X     &kp C                       &kp V      &kp B            &kp N          &kp M        &kp COMMA               &kp PERIOD  &mt2 RSHFT SLASH  &kp SQT
-&kp F13    &kp LSHFT  &kp A     &lt_to_layer_0 6 BACKSPACE  &kp SPACE  &kp LEFT_ALT     &kp RS(SLASH)  &kp RCTRL    &lt_to_layer_0 7 ENTER  &kp F15     &kp F16           &kp F17
-                      &kp LALT  &kp C_VOLUME_DOWN           &kp LGUI   &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown         &allow_end
+&kp TAB    &kp Q    &kp W         &kp E                   &kp R          &kp T            &kp Y          &kp U        &kp I                   &kp O       &kp P      &kp BACKSPACE
+&kp LCMD   &kp A    &kp S         &kp D                   &kp F          &kp G            &kp H          &kp J        &kp K                   &kp L       &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z    &kp X         &kp C                   &kp V          &kp B            &kp N          &kp M        &kp COMMA               &kp PERIOD  &kp SLASH  &kp SQT
+&kp F13    &kp F14  &kp LEFT_ALT  &lt_to_layer_0 6 LANG2  &kp SPACE      &kp LEFT_ALT     &kp LEFT_ALT   &kp RCTRL    &lt_to_layer_0 7 LANG1  &kp F15     &kp F16    &kp F17
+                    &kp LCMD      &kp C_VOLUME_DOWN       &kp C_AC_BACK  &kp C_VOLUME_UP  &allow_pageup  &allow_home  &allow_pagedown         &allow_end
             >;
         };
 
@@ -540,11 +546,11 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&kp ESC  &kp ESC  &kp F2   &kp F3  &kp F4  &kp F5   &kp N1             &kp N2     &kp N3            &kp N4     &kp N5           &kp DELETE
-&trans   &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp N6             &kp N7     &kp N8            &kp N9     &kp N0           &trans
-&trans   &kp F11  &kp F12  &trans  &trans  &trans   &kp MINUS          &kp EQUAL  &kp SINGLE_QUOTE  &kp GRAVE  &mt2 RSHFT BSLH  &kp GRAVE
-&trans   &trans   &trans   &trans  &trans  &trans   &kp RS(BACKSLASH)  &trans     &trans            &trans     &trans           &trans
-                  &trans   &trans  &trans  &trans   &trans             &trans     &trans            &trans
+&kp ESC  &trans   &kp F2   &kp F3  &kp F4  &kp F5   &kp N1     &kp N2     &kp N3    &kp N4    &kp N5    &kp DELETE
+&trans   &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp N6     &kp N7     &kp N8    &kp N9    &kp N0    &trans
+&trans   &kp F11  &kp F12  &trans  &trans  &trans   &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+&trans   &trans   &trans   &trans  &trans  &trans   &trans     &trans     &trans    &trans    &trans    &trans
+                  &trans   &trans  &trans  &trans   &trans     &trans     &trans    &trans
             >;
         };
 
@@ -553,22 +559,22 @@
             sensor-bindings = <&volume_up_down>, <&volume_up_down>;
 
             bindings = <
-&kp ESC  &kp ESC  &trans  &kp LBKT              &kp RBKT               &trans  &kp HOME      &kp RC(PG_UP)  &kp RC(PG_DN)     &kp END    &kp DELETE       &kp DEL
-&trans   &trans   &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp LEFT      &kp DOWN       &kp UP            &kp RIGHT  &trans           &trans
-&trans   &trans   &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &kp MINUS     &kp EQUAL      &kp SINGLE_QUOTE  &kp GRAVE  &mt2 RSHFT BSLH  &kp GRAVE
-&trans   &trans   &trans  &trans                &trans                 &trans  &kp RS(BSLH)  &trans         &trans            &trans     &trans           &trans
-                  &trans  &trans                &trans                 &trans  &trans        &trans         &trans            &trans
+&kp ESC  &trans  &trans  &kp LBKT              &kp RBKT               &trans  &kp HOME   &kp RC(PG_UP)  &kp RC(PG_DN)  &kp END    &trans    &kp DEL
+&trans   &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT  &trans    &trans
+&trans   &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &kp MINUS  &kp EQUAL      &kp LBKT       &kp RBKT   &kp BSLH  &kp GRAVE
+&trans   &trans  &trans  &trans                &trans                 &trans  &trans     &trans         &trans         &trans     &trans    &trans
+                 &trans  &trans                &trans                 &trans  &trans     &trans         &trans         &trans
             >;
         };
 
         MAC_ADJUST {
             display-name = "mac_adjust";
             bindings = <
-&trans  &trans  &tog 1  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans         &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans         &trans         &trans
-                &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans
+&trans  &trans  &tog 1  &trans  &trans  &trans  &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR    &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
+                &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans
             >;
         };
     };
